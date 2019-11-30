@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="../style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <div class="btn-group dropright nav-link">
+                <a href="../homepage/index.html" class="btn btn-dark" role="button">About</a>
+            </div>
+            <!-- Split dropright button -->
+            <div class="btn-group dropright nav-link">
+                <a href="../experience/main.html" class="btn btn-dark" role="button">Experience</a>
+                <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-item" href="../experience/university.html">University</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../experience/volunteer.html">Volunteering</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../experience/work.html">Work</a>
+                    </li>
+                </div>
+            </div>
+            <div class="btn-group dropright nav-link">
+                <a href="../photography/main.html" class="btn btn-dark" role="button">Photography</a>
+                <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-item" href="../photography/landscape.html">Landscape</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../photography/portrait.html">Portrait</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../photography/urban.html">Urban</a>
+                    </li>
+                </div>
+            </div>
+            <div class="btn-group dropright nav-link">
+                <a href="../current%20events/main.html" class="btn btn-dark" role="button">Current Events</a>
+            </div>
+            <div class="btn-group dropright nav-link">
+                <a href="../contacts/main.html" class="btn btn-dark" role="button">Contacts</a>
+            </div>
+        </ul>
+    </div>
+</nav>
+<img src="../images/urban.jpg" class="img-fluid w-100">
+<div class="container-fluid black">
+    <div class="container padding">
+        <h4 class="font-weight-light h4 text-center text-white-50">Exploring the urban photography with a blend of portraits and colour theme.</h4>
+        <h1 class="display-4 font-weight-light text-white x">x</h1>
+    </div>
+</div>
+<div id="vue">
+    <!-- reactive framework to make templating images easy -->
+    <div class="container landscapeimgs text-center" v-for="n in 12">
+        <img height="auto" width="800" :src="'../images/Urban/'+n+'.jpg'">
+    </div>
+</div>
+<div class="container-fluid footer">
+    <div class="row socialmedia">
+        <div class="col-1">
+            <a href="https://www.facebook.com/serena.bao">
+                <img src="../images/fb2.png" height="80">
+            </a>
+        </div>
+        <div class="col-1">
+            <a href="https://www.instagram.com/sxrena_b/">
+                <img src="../images/ig2.png" height="80">
+            </a>
+        </div>
+        <div class="col-1">
+            <img src="../images/bao2.png" height="80">
+        </div>
+        <div class="col-9 info">
+            <h6 class="text-white">sbao28@uwo.ca</h6>
+            <h6 class="text-white">778-xxx-xxxx</h6>
+            <h6 class="text-white">sxrena_b</h6>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    new Vue({
+        el: '#vue',
+        data: {hello: 'Hello World'}
+    })
+</script>
+</html>

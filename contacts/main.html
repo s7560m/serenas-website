@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="../style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <div class="btn-group dropright nav-link">
+                <a href="../homepage/index.html" class="btn btn-dark" role="button">About</a>
+            </div>
+            <!-- Split dropright button -->
+            <div class="btn-group dropright nav-link">
+                <a href="../experience/main.html" class="btn btn-dark" role="button">Experience</a>
+                <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-item" href="../experience/university.html">University</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../experience/volunteer.html">Volunteering</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../experience/work.html">Work</a>
+                    </li>
+                </div>
+            </div>
+            <div class="btn-group dropright nav-link">
+                <a href="../photography/main.html" class="btn btn-dark" role="button">Photography</a>
+                <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-item" href="../photography/landscape.html">Landscape</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../photography/portrait.html">Portrait</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../photography/urban.html">Urban</a>
+                    </li>
+                </div>
+            </div>
+            <div class="btn-group dropright nav-link">
+                <a href="../current%20events/main.html" class="btn btn-dark" role="button">Current Events</a>
+            </div>
+            <div class="btn-group dropright nav-link">
+                <a href="../contacts/main.html" class="btn btn-dark" role="button">Contacts</a>
+            </div>
+        </ul>
+    </div>
+</nav>
+    <img src="../images/contact2.jpg" class="img-fluid w-100"  >
+    <div class="container-fluid grey">
+        <h4 class="text-center text-white serena">
+            Serena Bao
+        </h4>
+        <h4 class="text-center text-white">
+            Email: sbao28@uwo.ca
+        </h4>
+        <h4 class="text-center text-white">
+            Facebook: <a href="https://www.facebook.com/serena.bao">Serena Bao</a>
+        </h4>
+        <h4 class="text-center text-white">
+            IG: <a href="https://www.instagram.com/sxrena_b/">@sxrena_b</a>
+        </h4>
+        <h4 class="text-center text-white">
+            Always open to inquiries, concerns, or simply to chat!
+        </h4>
+    </div>
+<div class="container-fluid grey">
+    <h2 class="text-white display-4 text-center photoexp">Photo Experience</h2>
+    <div id="vue2">
+        <div class="parent" v-for="n in 6">
+        <div class="headline-wrapper2">
+            <h3 class="text-white">{{ experienceHeadline[n] }}</h3>
+        </div>
+        <div class="body-wrapper">
+            <h6 class="text-white-50">{{ experienceBody[n]}}</h6>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="container-fluid footer">
+    <div class="row socialmedia">
+        <div class="col-1">
+            <a href="https://www.facebook.com/serena.bao">
+                <img src="../images/fb2.png" height="80">
+            </a>
+        </div>
+        <div class="col-1">
+            <a href="https://www.instagram.com/sxrena_b/">
+                <img src="../images/ig2.png" height="80">
+            </a>
+        </div>
+        <div class="col-1">
+            <img src="../images/bao2.png" height="80">
+        </div>
+        <div class="col-9 info">
+            <h6 class="text-white">sbao28@uwo.ca</h6>
+            <h6 class="text-white">778-xxx-xxxx</h6>
+            <h6 class="text-white">sxrena_b</h6>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#vue2',
+        data: {
+            experienceHeadline: [
+                "Photography Executive at CAISA Fashion Show",
+                "Marketing/Media Director at Canadian Student Asian Association",
+                "Modeling Portfolio at private",
+                "Model United Nations Conference at MUN",
+                "Concert for Change at Starts With One",
+                "Christmas/Halloween Events at St. John Ambulance"
+            ],
+            experienceBody: [
+                "University of Western Ontario\n" +
+                "Canada’s largest student-run charity fashion show (donated over $335,000 to date). I was involved in the media department photographing models to create published magazines.\n",
+                "University of Western Ontario\n" +
+                "Analyzed a multitude of public affairs, primarily focusing on marketing performance, structure, competitors, revenue streams, and conducted presentations.\n" +
+                "Graphic designer and photographer–created over 20 cover photos, posters, and several short films.\n" +
+                "Reached to over 2,763 students accross campus through social media platform\n",
+                "Experience in shooting models to get into modeling agencies around Vancouver and Korea.",
+                "​Shooting for the Canadian International Model United Nations at the Pinnacle Harbourfront Hotel\n",
+                "Shot at a non-profit fundraising live performance concert to donate to charities to help the poverty in Vancouver",
+                "I have been involved with SJA for over six years partaking in their first aid training as well as taking photos for many events throughout the years."
+            ]
+        }
+    })
+</script>
+</body>
+</html>
